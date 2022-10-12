@@ -36,8 +36,15 @@ const listaNomi = ['mario', 'luca', 'giovanni'];
 const listaCognomi = ['rossi', 'capatonda','enstein'];
 
 for(let i = 0; i < listaNomi.length; i++){
-    let nomeCognome = listaNomi[i] + listaCognomi [i];
-    console.log(nomeCognome);
+    let nome = listaNomi[i];
+    // console.log(nome);
+    for(let a = 0; a < listaCognomi.length; a++){
+        let cognome = listaCognomi[a];
+        // console.log(cognome);
+        let nomeCognome = nome + ' ' + cognome;
+        console.log(nomeCognome);
+    }
+    
 }
 
 
