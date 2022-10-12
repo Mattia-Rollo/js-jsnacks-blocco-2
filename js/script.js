@@ -5,7 +5,7 @@ Inserisci un numero, se è pari stampa il numero, se è dispari stampa il numero
 const wrapper = document.getElementById('wrapper');
 const btn = document.querySelector('button');
 
-//creo un input nel HTML ciclo for inutile
+//creo un input nel HTML ciclo for inutile :-)
 for(let i = 0; i < 1 ; i++){
     const addInput = document.createElement('input');
     wrapper.prepend(addInput);
@@ -13,7 +13,7 @@ for(let i = 0; i < 1 ; i++){
 //prendo il primo input creato in javascript;
 const primoInput = wrapper.getElementsByTagName('input')[0];
 // wrapper.prepend(addInput);
-const cls = ['my-3','d-block'];
+const cls = ['my-3','d-inline-block'];
 primoInput.classList.add(...cls);
 primoInput.addEventListener('change', function() {
     let value = parseFloat(primoInput.value);    
