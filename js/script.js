@@ -15,6 +15,7 @@ const primoInput = wrapper.getElementsByTagName('input')[0];
 // wrapper.prepend(addInput);
 const cls = ['my-3','d-inline-block'];
 primoInput.classList.add(...cls);
+
 primoInput.addEventListener('change', function() {
     let value = parseFloat(primoInput.value);    
     console.log(primoInput.value);
@@ -90,5 +91,10 @@ while (listaUno.length > listaDue.length){
 
     listaDue.push('nuovo');
 }
+while (listaDue.length > listaUno.length){
+
+    listaUno.push('nuovo');
+}
+
 console.log(listaUno,listaDue);
 wrapper4.innerHTML = listaUno + ' <br>' + listaDue;
