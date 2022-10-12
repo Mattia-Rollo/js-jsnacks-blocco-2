@@ -47,5 +47,20 @@ for(let i = 0; i < listaNomi.length; i++){
     
 }
 
+/*
+Crea un array di numeri interi e fai la somma di tutti gli elementi  che sono in posizione dispari
 
 
+
+*/
+
+const listaInteri = [0,1,2,3,4,5,6,7];
+
+let somma = 0;
+
+for (let i = 0; i < listaInteri.length; i++){
+    if(!(i % 2 == 0)){
+        somma += parseInt(listaInteri[i]);
+    }
+}
+console.log(somma);
