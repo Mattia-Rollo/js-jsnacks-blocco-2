@@ -6,18 +6,17 @@ const addInput = document.createElement('input');
 const wrapper = document.getElementById('wrapper');
 const btn = document.querySelector('button');
 
-wrapper.append(addInput);
+wrapper.prepend(addInput);
 
 addInput.addEventListener('change', function() {
-
-    console.log(addInput.value);
-    if ((parseInt(addInput.value)) % 2 == 0){
+    let value = parseInt(addInput.value);    console.log(addInput.value);
+    if (!(value % 2 == 0)){
         console.log(addInput.value);
-    }else {
-        console.log(parseInt(addInput.value) + 1);
+        value++;
     }
-
+wrapper.getElementsByTagName('span')[0].innerHTML = value;
 })
+
 
 const wrapper2 = document.getElementById('wrapper2');
 // wrapper2.append(addInput);
