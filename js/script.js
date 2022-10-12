@@ -59,7 +59,9 @@ Crea un array di numeri interi e fai la somma di tutti gli elementi  che sono in
 const wrapper3 = document.getElementById('wrapper3');
 const listaInteri = [0,1,2,3,4,5,6,7];
 const spanSomma = document.createElement('span');
-wrapper.append(spanSomma);
+const cls2 = ['d-block','fs-3']
+spanSomma.classList.add(...cls2);
+console.log(spanSomma);
 let somma = 0;
 
 for (let i = 0; i < listaInteri.length; i++){
@@ -69,6 +71,8 @@ for (let i = 0; i < listaInteri.length; i++){
 }
 wrapper3.innerHTML = listaInteri;
 spanSomma.innerHTML = somma;
+// wrapper3.append(spanSomma);
+wrapper3.append(spanSomma);
 console.log(somma);
 
 /*
@@ -77,7 +81,7 @@ Crea due array che hanno un numero di elementi diversi.  Aggiungi elementi allâ€
 
 
 */
-
+const wrapper4 = document.getElementById('wrapper4');
 const listaUno = ['banana', 'kiwi', 'arancia', 'mela'];
 const listaDue = ['apple','cocco'];
 
@@ -87,3 +91,4 @@ while (listaUno.length > listaDue.length){
     listaDue.push('nuovo');
 }
 console.log(listaUno,listaDue);
+wrapper4.innerHTML = listaUno + ' <br>' + listaDue;
