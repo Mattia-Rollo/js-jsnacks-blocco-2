@@ -66,7 +66,7 @@ console.log(spanSomma);
 let somma = 0;
 
 for (let i = 0; i < listaInteri.length; i++){
-    if(!(i % 2 == 0)){
+    if(i % 2 == 0){
         somma += parseInt(listaInteri[i]);
     }
 }
