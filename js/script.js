@@ -58,7 +58,7 @@ Crea un array di numeri interi e fai la somma di tutti gli elementi  che sono in
 
 */
 const wrapper3 = document.getElementById('wrapper3');
-const listaInteri = [0,1,2,3,4,5,6,7];
+const listaInteri = [1,2,3,4,5,6,7];
 const spanSomma = document.createElement('span');
 const cls2 = ['d-block','fs-3']
 spanSomma.classList.add(...cls2);
