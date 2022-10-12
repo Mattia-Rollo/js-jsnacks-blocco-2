@@ -69,8 +69,8 @@ for (let i = 0; i < listaInteri.length; i++){
         somma += parseInt(listaInteri[i]);
     }
 }
-wrapper3.innerHTML = listaInteri;
-spanSomma.innerHTML = 'somma dei numeri dispari: ' + somma;
+wrapper3.innerHTML = 'listaInteri: ' + listaInteri;
+spanSomma.innerHTML = 'somma dei numeri index[odd]: ' + somma;
 // wrapper3.append(spanSomma);
 wrapper3.append(spanSomma);
 console.log(somma);
