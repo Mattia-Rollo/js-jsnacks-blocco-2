@@ -64,3 +64,19 @@ for (let i = 0; i < listaInteri.length; i++){
     }
 }
 console.log(somma);
+
+/*
+**Snack4 (Bonus)**
+Crea due array che hanno un numero di elementi diversi.  Aggiungi elementi all’array che ha meno elementi fino a quando ne avrà tanti quanti l’altro.
+
+
+*/
+
+const listaUno = ['banana', 'kiwi', 'arancia', 'mela'];
+const listaDue = ['apple','cocco'];
+
+while (listaUno.length > listaDue.length){
+
+    listaDue.push('nuovo');
+}
+console.log(listaUno,listaDue);
