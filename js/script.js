@@ -11,15 +11,15 @@ for(let i = 0; i < 1 ; i++){
     wrapper.prepend(addInput);
 }
 //prendo il primo input creato in javascript;
-const primoSneak = wrapper.getElementsByTagName('input')[0];
+const primoInput = wrapper.getElementsByTagName('input')[0];
 // wrapper.prepend(addInput);
 const cls = ['my-3','d-block'];
-primoSneak.classList.add(...cls);
-primoSneak.addEventListener('change', function() {
-    let value = parseInt(primoSneak.value);    
-    console.log(primoSneak.value);
+primoInput.classList.add(...cls);
+primoInput.addEventListener('change', function() {
+    let value = parseFloat(primoInput.value);    
+    console.log(primoInput.value);
     if (!(value % 2 == 0)){
-        console.log(primoSneak.value);
+        console.log(primoInput.value);
         value++;
     }
 wrapper.getElementsByTagName('span')[0].innerHTML = value;
@@ -31,9 +31,10 @@ Generatore di “nomi cognomi” casuali: il Grande Gatsby ha  una lista di nomi
 
 
 */
-
+const wrapper2 = document.getElementById('wrapper2');
 const listaNomi = ['mario', 'luca', 'giovanni'];
 const listaCognomi = ['rossi', 'capatonda','enstein'];
+const persone = [];
 
 for(let i = 0; i < listaNomi.length; i++){
     let nome = listaNomi[i];
@@ -42,11 +43,13 @@ for(let i = 0; i < listaNomi.length; i++){
         let cognome = listaCognomi[a];
         // console.log(cognome);
         let nomeCognome = nome + ' ' + cognome;
+        persone.push(nomeCognome);
         console.log(nomeCognome);
+    
     }
     
 }
-
+wrapper2.innerHTML = persone;
 /*
 Crea un array di numeri interi e fai la somma di tutti gli elementi  che sono in posizione dispari
 
@@ -74,6 +77,7 @@ Crea due array che hanno un numero di elementi diversi.  Aggiungi elementi all�
 
 const listaUno = ['banana', 'kiwi', 'arancia', 'mela'];
 const listaDue = ['apple','cocco'];
+
 
 while (listaUno.length > listaDue.length){
 
