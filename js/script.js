@@ -70,7 +70,7 @@ for (let i = 0; i < listaInteri.length; i++){
     }
 }
 wrapper3.innerHTML = listaInteri;
-spanSomma.innerHTML = somma;
+spanSomma.innerHTML = 'somma dei numeri dispari: ' + somma;
 // wrapper3.append(spanSomma);
 wrapper3.append(spanSomma);
 console.log(somma);
