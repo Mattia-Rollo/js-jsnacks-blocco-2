@@ -71,7 +71,7 @@ for (let i = 0; i < listaInteri.length; i++){
     }
 }
 wrapper3.innerHTML = 'listaInteri: ' + listaInteri;
-spanSomma.innerHTML = 'somma dei numeri index[odd]: ' + somma;
+spanSomma.innerHTML = 'somma dei numeri pos. dispari: ' + somma;
 // wrapper3.append(spanSomma);
 wrapper3.append(spanSomma);
 console.log(somma);
