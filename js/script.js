@@ -29,28 +29,50 @@ wrapper.getElementsByTagName('span')[0].innerHTML = value;
 /*
 Generatore di “nomi cognomi” casuali: il Grande Gatsby ha  una lista di nomi e una lista di cognomi, e da queste vuole generare una falsa lista di invitati con nome e cognome.
 
-
-
 */
-const wrapper2 = document.getElementById('wrapper2');
-const listaNomi = ['mario', 'luca', 'giovanni'];
-const listaCognomi = ['rossi', 'capatonda','enstein'];
-const persone = [];
+function isInList(array,value) {
+    let check = false;
+    for(let i = 0; i < array.length; i++){
+        if(value === array[i]){
+            check = true;
+        }
+        //ATTENZIONE mettere un else qui è un problema
+        //perchè anche se dovesse trovare l'elemento nella lista
+        //quando poi lo confronta con quello successivo siccome non sono uguali ritorna false
+        // sse dovesse esserci un else check=false ATTENZIONE
+    }
+    return check;
+}
 
-for(let i = 0; i < listaNomi.length; i++){
-    let nome = listaNomi[i];
+const wrapper2 = document.getElementById('wrapper2');
+const listaNomi = ['mario', 'luca', 'giovanni','Mattia','Stefania','Pietro'];
+const listaCognomi = ['rossi', 'capatonda','enstein','pirelli','rollo','benelli'];
+const persone = [];
+let index = 0;
+while(persone.length < listaNomi.length){
+    // let nomeRandom = Math.floor(Math.random()* 2) +1;
+    let cognomeRandom = Math.floor(Math.random() * 5) +1;
+    let nomeRandom = Math.floor(Math.random() * 5) +1;
+    let nome = listaNomi[nomeRandom];
     // console.log(nome);
-    for(let a = 0; a < listaCognomi.length; a++){
-        let cognome = listaCognomi[a];
+    //se il numero è già stato usato 
+        let cognome = listaCognomi[cognomeRandom];
         // console.log(cognome);
         let nomeCognome = nome + ' ' + cognome;
+    if(!isInList(persone,nomeCognome)){
         persone.push(nomeCognome);
         console.log(nomeCognome);
+        // console.log(isInList(nomeCognome))
+        index++;
+}
     
-    }
     
 }
 wrapper2.innerHTML = persone;
+
+
+
+
 /*
 Crea un array di numeri interi e fai la somma di tutti gli elementi  che sono in posizione dispari
 
@@ -62,7 +84,7 @@ const listaInteri = [1,2,3,4,5,6,7];
 const spanSomma = document.createElement('span');
 const cls2 = ['d-block','fs-3']
 spanSomma.classList.add(...cls2);
-console.log(spanSomma);
+// console.log(spanSomma);
 let somma = 0;
 
 for (let i = 0; i < listaInteri.length; i++){
