@@ -46,13 +46,13 @@ function isInList(array,value) {
 
 const wrapper2 = document.getElementById('wrapper2');
 const listaNomi = ['mario', 'luca', 'giovanni','Mattia','Stefania','Pietro'];
-const listaCognomi = ['rossi', 'capatonda','enstein','pirelli','rollo','benelli'];
+const listaCognomi = ['rossi', 'capatonda','enstein','pirelli','rollo','benelli','lombardo','castelli','lombrico'];
 const persone = [];
 let index = 0;
 while(persone.length < listaNomi.length){
     // let nomeRandom = Math.floor(Math.random()* 2) +1;
-    let cognomeRandom = Math.floor(Math.random() * 5) +1;
-    let nomeRandom = Math.floor(Math.random() * 5) +1;
+    let cognomeRandom = Math.floor(Math.random() * listaCognomi.length);
+    let nomeRandom = Math.floor(Math.random() * listaNomi.length);
     let nome = listaNomi[nomeRandom];
     // console.log(nome);
     //se il numero è già stato usato 
